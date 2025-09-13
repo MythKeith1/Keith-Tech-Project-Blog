@@ -1,0 +1,225 @@
+/* Root Variables */
+:root {
+  --primary: #ff6f61;
+  --dark: #111;
+  --light: #fff;
+  --gray: #666;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark);
+  background: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo span { color: var(--primary); }
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--dark);
+  transition: color 0.3s ease, border-bottom 0.3s;
+}
+.nav a.active, .nav a:hover { 
+  color: var(--primary); 
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("assets/hero-bg.jpg") no-repeat center/cover;
+  position: relative;
+  color: var(--light);
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeDown 1.5s ease-in-out;
+}
+.hero-content p { 
+  font-size: 1.2rem; 
+  margin-bottom: 30px; 
+  animation: fadeUp 1.5s ease-in-out; 
+}
+
+.btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+.btn:hover { transform: scale(1.1); }
+
+/* Glowing Buttons */
+.glow-btn {
+  box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+  transition: all 0.3s;
+}
+.glow-btn:hover {
+  box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary);
+  transform: scale(1.1);
+}
+
+/* Articles */
+.articles {
+  padding: 100px 50px;
+  text-align: center;
+}
+.articles h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: var(--light);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card img { width: 100%; }
+.card h3 {
+  margin: 20px;
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+}
+.card p { margin: 0 20px 20px; color: var(--gray); }
+.read-more {
+  display: inline-block;
+  margin: 0 20px 20px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* About */
+.about {
+  padding: 100px 50px;
+  background: #f9f9f9 url("assets/about-bg.jpg") fixed center/cover;
+  text-align: center;
+}
+.about h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+/* Contact */
+.contact {
+  padding: 100px 50px;
+  text-align: center;
+}
+.contact h2 {
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: var(--font-body);
+}
+textarea { resize: none; height: 120px; }
+button { border: none; cursor: pointer; }
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+/* Parallax Effect */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .header { padding: 15px 20px; }
+}
