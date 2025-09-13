@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">My<span>Blog</span></div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO with Parallax -->
+  <section class="hero parallax" id="home">
+    <div class="hero-content">
+      <h1><span id="animated-text"></span></h1>
+      <p>Engaging stories, sleek design, and interactive reading.</p>
+      <a href="#articles" class="btn glow-btn">Explore Articles</a>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section class="articles" id="articles">
+    <h2>Latest Articles</h2>
+    <div class="grid">
+      <article class="card fade-in">
+        <img src="assets/blog1.jpg" alt="Blog 1">
+        <h3>Designing for the Future</h3>
+        <p>Explore how web design trends are shaping the future of digital experiences.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+
+      <article class="card fade-in">
+        <img src="assets/blog2.jpg" alt="Blog 2">
+        <h3>Minimalism Meets Functionality</h3>
+        <p>Learn how simplicity in design can create powerful user engagement.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+
+      <article class="card fade-in">
+        <img src="assets/blog3.jpg" alt="Blog 3">
+        <h3>The Rise of Interactive UI</h3>
+        <p>Discover how animations and micro-interactions keep users hooked.</p>
+        <a href="#" class="read-more">Read More</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about parallax" id="about">
+    <h2>About This Blog</h2>
+    <p>This blog blends premium design, smooth interactivity, and engaging content to create a reading experience like no other. Every detail is crafted to keep you inspired and connected.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn glow-btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Premium Blog. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
